@@ -12,7 +12,8 @@ app.get('/posts/:id/comments',(req,res)=>{
 })
 
 app.get('/posts/:id/comments',(req,res)=>{
-
+    const commentId = randomBytes(4).toString('hex')
+    const { content } = req.body
 })
 app.listen(4001,()=>{
     console.log('listening on 4001');

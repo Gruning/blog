@@ -8,6 +8,9 @@ app.use(bodyParser.json())
 const commentsByPostId ={}
 
 app.get('/posts/:id/comments',(req,res)=>{
+    console.log(req.params.id)
+    console.log(commentsByPostId)
+    console.log(commentsByPostId[req.params.id ]);
     res.send(commentsByPostId[req.params.id ]||[])
 })
 
